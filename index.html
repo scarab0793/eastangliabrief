@@ -106,6 +106,18 @@ footer p { margin: 0; max-width: 72ch; }
   .when { padding-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .story h4 a { transition: none; } }
+
+.article-view {max-width:760px;margin:0 auto;padding:16px 0 35px}
+.back-link {display:inline-block;color:var(--accent);font-size:.9rem;margin:0 0 24px;text-decoration:none}
+.article-view h2 {font-family:var(--font-display);font-size:clamp(2.2rem,6vw,3.7rem);line-height:1.05;margin:10px 0 18px}
+.article-meta {color:var(--muted);font-family:var(--font-mono);font-size:.78rem;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+.article-lead {font-size:1.16rem;line-height:1.7;color:var(--fg)}
+.article-copy {font-size:1.04rem;line-height:1.85;white-space:pre-line}
+.article-figure {margin:24px 0}.article-figure img {width:100%;max-height:440px;object-fit:cover;border-radius:5px}
+.article-figure figcaption {font-size:.75rem;color:var(--muted)}
+.article-sources {border-top:2px solid var(--fg);margin-top:32px;padding-top:16px}
+.article-sources a {color:var(--accent);overflow-wrap:anywhere}
+.story h4 a {cursor:pointer}
 </style>
 
 </head>
@@ -123,7 +135,7 @@ footer p { margin: 0; max-width: 72ch; }
 <script type="application/json" id="news-data">
 {
   "updated": "Friday 6 November 2026",
-  "note": "Summaries are written in our own words; read the full story at the publisher. News links open through the NewsNow aggregator, which forwards you to the publisher's site.",
+  "note": "Independent local news coverage based on verified sources. Where only limited facts are available, we publish a short briefing rather than inventing a full article. Original sources are linked in every story.",
   "cities": [
     {
       "id": "norwich", "name": "Norwich", "county": "NFK",
@@ -279,7 +291,7 @@ footer p { margin: 0; max-width: 72ch; }
     row.appendChild(el('div', 'when' + (item.when === 'today' || item.when === 'tonight' ? ' today' : ''), item.when));
     var body = el('div');
     var h = el('h4'); var a = el('a', null, item.title);
-    a.href = item.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; h.appendChild(a);
+    a.href = '#article/' + encodeURIComponent(item._city || '') + '/' + encodeURIComponent(item._index); h.appendChild(a);
     body.appendChild(h);
     if (item.summary) body.appendChild(el('p', null, item.summary));
     var src = el('div', 'src');
@@ -308,7 +320,7 @@ footer p { margin: 0; max-width: 72ch; }
     panel.appendChild(head);
     panel.appendChild(sourceLinks(city));
     if (!city.items.length) { panel.appendChild(el('p', 'empty', 'No new stories for this town today.')); return; }
-    city.items.forEach(function (it) { panel.appendChild(story(it)); });
+    city.items.forEach(function (it, i) { it._city = city.id; it._index = i; panel.appendChild(story(it)); });
   }
 
   function renderAll() {
@@ -324,12 +336,49 @@ footer p { margin: 0; max-width: 72ch; }
       var more = el('a', 'more', 'All ' + c.items.length + ' stories →'); more.href = '#' + c.id;
       sh.appendChild(more);
       panel.appendChild(sh);
-      c.items.slice(0, 3).forEach(function (it) { panel.appendChild(story(it)); });
+      c.items.slice(0, 3).forEach(function (it, i) { it._city = c.id; it._index = i; panel.appendChild(story(it)); });
     });
+  }
+
+  function renderArticle(city, item) {
+    panel.textContent = '';
+    var article = el('article', 'article-view');
+    var back = el('a', 'back-link', '← Back to ' + city.name);
+    back.href = '#' + city.id; article.appendChild(back);
+    article.appendChild(el('div', 'stamp', city.name.toUpperCase() + ' / ' + city.county));
+    article.appendChild(el('h2', null, item.title));
+    article.appendChild(el('div', 'article-meta', item.when + ' · ' + item.source + (item.official ? ' · official release' : '') + (item.paywall ? ' · subscription source' : '')));
+    if (item.image && item.imageLicence) {
+      var fig = el('figure', 'article-figure');
+      var img = el('img'); img.src = item.image; img.alt = item.imageAlt || ''; img.loading = 'lazy';
+      fig.appendChild(img);
+      fig.appendChild(el('figcaption', null, item.imageCredit || item.imageLicence));
+      article.appendChild(fig);
+    }
+    if (item.summary) article.appendChild(el('p', 'article-lead', item.summary));
+    if (item.body) article.appendChild(el('div', 'article-copy', item.body));
+    else article.appendChild(el('p', 'article-copy', 'This is a short briefing based on the information currently verified. Further details will be added when reliable sources are available.'));
+    var sources = el('div', 'article-sources');
+    sources.appendChild(el('h3', null, 'Original reporting & sources'));
+    var links = Array.isArray(item.sources) && item.sources.length ? item.sources : [{label:item.source,url:item.url}];
+    links.forEach(function (source) {
+      if (!source.url || !/^https:\/\//.test(source.url)) return;
+      var p = el('p'); var a = el('a', null, source.label || 'Read original source');
+      a.href = source.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; p.appendChild(a); sources.appendChild(p);
+    });
+    article.appendChild(sources); panel.appendChild(article);
   }
 
   function route() {
     var h = (location.hash || '').replace('#', '');
+    if (h.indexOf('article/') === 0) {
+      var parts = h.split('/');
+      var city = data.cities.find(function (c) { return c.id === decodeURIComponent(parts[1] || ''); });
+      var idx = Number(parts[2]);
+      if (city && Number.isInteger(idx) && idx >= 0 && idx < city.items.length) {
+        buildTabs(city.id); renderArticle(city, city.items[idx]); window.scrollTo(0,0); return;
+      }
+    }
     if (ids.indexOf(h) === -1) h = 'all';
     buildTabs(h);
     if (h === 'all') renderAll();
