@@ -737,7 +737,6 @@ footer p { margin: 0; max-width: 72ch; }
     body.appendChild(h);
     if (item.summary) body.appendChild(el('p', null, item.summary));
     var src = el('div', 'src');
-    src.appendChild(el('span', 'name', item.source));
     if (item.official) src.appendChild(el('span', 'tag off', 'official release'));
     if (item.paywall) src.appendChild(el('span', 'tag pay', 'subscription'));
     body.appendChild(src);
@@ -789,7 +788,7 @@ footer p { margin: 0; max-width: 72ch; }
     back.href = '#' + city.id; article.appendChild(back);
     article.appendChild(el('div', 'stamp', city.name.toUpperCase() + ' / ' + city.county));
     article.appendChild(el('h2', null, item.title));
-    article.appendChild(el('div', 'article-meta', item.when + ' · ' + item.source + (item.official ? ' · official release' : '') + (item.paywall ? ' · subscription source' : '')));
+    article.appendChild(el('div', 'article-meta', item.when + (item.official ? ' · official release' : '') + (item.paywall ? ' · subscription source' : '')));
     if (item.image && item.imageLicence) {
       var fig = el('figure', 'article-figure');
       var img = el('img'); img.src = item.image; img.alt = item.imageAlt || ''; img.loading = 'lazy';
@@ -801,7 +800,7 @@ footer p { margin: 0; max-width: 72ch; }
     if (item.body) article.appendChild(el('div', 'article-copy', item.body));
     else article.appendChild(el('p', 'article-copy', 'This is a short briefing based on the information currently verified. Further details will be added when reliable sources are available.'));
     var sources = el('div', 'article-sources');
-    sources.appendChild(el('h3', null, 'Original reporting & sources'));
+    sources.appendChild(el('h3', null, 'Sources'));
     var links = Array.isArray(item.sources) && item.sources.length ? item.sources : [{label:item.source,url:item.url}];
     links.forEach(function (source) {
       if (!source.url || !/^https:\/\//.test(source.url)) return;
