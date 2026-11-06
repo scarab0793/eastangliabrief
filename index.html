@@ -135,120 +135,562 @@ footer p { margin: 0; max-width: 72ch; }
 <script type="application/json" id="news-data">
 {
   "updated": "Friday 6 November 2026",
-  "note": "Independent local news coverage based on verified sources. Where only limited facts are available, we publish a short briefing rather than inventing a full article. Original sources are linked in every story.",
+  "note": "Independent local news coverage based on verified sources.",
   "cities": [
     {
-      "id": "norwich", "name": "Norwich", "county": "NFK",
+      "id": "norwich",
+      "name": "Norwich",
+      "county": "NFK",
       "blurb": "Norfolk's county town. The latest items come from Thursday's (5 Nov) collection.",
       "sources": [
-        {"label": "NewsNow: Norwich", "url": "https://www.newsnow.co.uk/h/UK/England/Norfolk/Norwich"},
-        {"label": "Norwich City Council", "url": "https://www.norwich.gov.uk/news"}
+        {
+          "label": "NewsNow: Norwich",
+          "url": "https://www.newsnow.co.uk/h/UK/England/Norfolk/Norwich"
+        },
+        {
+          "label": "Norwich City Council",
+          "url": "https://www.norwich.gov.uk/news"
+        }
       ],
       "items": [
-        {"when": "5 Nov", "title": "Dropped YouTubers plan their own rival Christmas lights switch-on in Norwich", "summary": "Covered by the BBC and the Norwich Evening News. Another report says Terry Bakes has put himself forward to switch on the official lights.", "source": "BBC", "url": "https://c.newsnow.co.uk/A/1328865076?-53928%3A41323", "paywall": false},
-        {"when": "5 Nov", "title": "Norwich has the lowest disposable income in the UK", "summary": "The report puts it at about £14 a day per person.", "source": "Eastern Daily Press", "url": "https://c.newsnow.co.uk/A/1328865992?-53928%3A41323", "paywall": true},
-        {"when": "5 Nov", "title": "Norwich prepares for Remembrance Sunday", "summary": "The city council's announcement about Sunday's (8 Nov) remembrance events.", "source": "Norwich City Council", "url": "https://c.newsnow.co.uk/A/1328871066?-53928%3A41323", "paywall": false, "official": true},
-        {"when": "5 Nov", "title": "Award-winning West End show coming to Norwich on its first UK tour", "summary": "The production arrives in the city as part of its first-ever UK tour.", "source": "Norwich Evening News", "url": "https://c.newsnow.co.uk/A/1328910491?-53928%3A41323", "paywall": true},
-        {"when": "5 Nov", "title": "Region's rising film-makers get the spotlight at BAFTA-qualifying city festival", "summary": "The festival showcases young film talent from across the area.", "source": "Norwich Evening News", "url": "https://c.newsnow.co.uk/A/1328882185?-53928%3A41323", "paywall": true},
-        {"when": "5 Nov", "title": "Former Norwich tip could become an industrial facility", "summary": "The story is about a proposed change of use for the site.", "source": "Norwich Evening News", "url": "https://c.newsnow.co.uk/A/1328868619?-53928%3A41323", "paywall": true},
-        {"when": "3 Nov", "title": "Extra Disney show announced for Norwich on first UK tour", "summary": "An additional date has been added to the previously announced show.", "source": "Eastern Daily Press", "url": "https://c.newsnow.co.uk/A/1328759278?-53928%3A41323", "paywall": true},
-        {"when": "30 Oct", "title": "4am queues as the new Norwich LEGO store opens", "summary": "Shoppers left the store carrying towering stacks of sets.", "source": "Eastern Daily Press", "url": "https://c.newsnow.co.uk/A/1328388965?-53928%3A41323", "paywall": true}
+        {
+          "when": "5 Nov",
+          "title": "Dropped YouTubers plan their own rival Christmas lights switch-on in Norwich",
+          "summary": "Covered by the BBC and the Norwich Evening News. Another report says Terry Bakes has put himself forward to switch on the official lights.",
+          "source": "BBC",
+          "url": "https://c.newsnow.co.uk/A/1328865076?-53928%3A41323",
+          "paywall": false
+        },
+        {
+          "when": "5 Nov",
+          "title": "Norwich has the lowest disposable income in the UK",
+          "summary": "The report puts it at about £14 a day per person.",
+          "source": "Eastern Daily Press",
+          "url": "https://c.newsnow.co.uk/A/1328865992?-53928%3A41323",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Norwich prepares for Remembrance Sunday",
+          "summary": "The city council's announcement about Sunday's (8 Nov) remembrance events.",
+          "source": "Norwich City Council",
+          "url": "https://c.newsnow.co.uk/A/1328871066?-53928%3A41323",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Award-winning West End show coming to Norwich on its first UK tour",
+          "summary": "The production arrives in the city as part of its first-ever UK tour.",
+          "source": "Norwich Evening News",
+          "url": "https://c.newsnow.co.uk/A/1328910491?-53928%3A41323",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Region's rising film-makers get the spotlight at BAFTA-qualifying city festival",
+          "summary": "The festival showcases young film talent from across the area.",
+          "source": "Norwich Evening News",
+          "url": "https://c.newsnow.co.uk/A/1328882185?-53928%3A41323",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Former Norwich tip could become an industrial facility",
+          "summary": "The story is about a proposed change of use for the site.",
+          "source": "Norwich Evening News",
+          "url": "https://c.newsnow.co.uk/A/1328868619?-53928%3A41323",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "Extra Disney show announced for Norwich on first UK tour",
+          "summary": "An additional date has been added to the previously announced show.",
+          "source": "Eastern Daily Press",
+          "url": "https://c.newsnow.co.uk/A/1328759278?-53928%3A41323",
+          "paywall": true
+        },
+        {
+          "when": "30 Oct",
+          "title": "4am queues as the new Norwich LEGO store opens",
+          "summary": "Shoppers left the store carrying towering stacks of sets.",
+          "source": "Eastern Daily Press",
+          "url": "https://c.newsnow.co.uk/A/1328388965?-53928%3A41323",
+          "paywall": true
+        }
       ]
     },
     {
-      "id": "great-yarmouth", "name": "Great Yarmouth", "county": "NFK",
+      "id": "great-yarmouth",
+      "name": "Great Yarmouth",
+      "county": "NFK",
       "blurb": "Norfolk's east-coast seaside town. The first four items come from today's (6 Nov) collection.",
       "sources": [
-        {"label": "NewsNow: Great Yarmouth", "url": "https://www.newsnow.co.uk/h/UK/England/Norfolk/Great+Yarmouth"},
-        {"label": "Great Yarmouth Borough Council", "url": "https://www.great-yarmouth.gov.uk/news"}
+        {
+          "label": "NewsNow: Great Yarmouth",
+          "url": "https://www.newsnow.co.uk/h/UK/England/Norfolk/Great+Yarmouth"
+        },
+        {
+          "label": "Great Yarmouth Borough Council",
+          "url": "https://www.great-yarmouth.gov.uk/news"
+        }
       ],
       "items": [
-        {"when": "today", "title": "Warning over scam emails offering fake council tax refunds", "summary": "The local paper urges residents to be on guard against the misleading messages.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1329102789?-58931%3A49098", "paywall": true},
-        {"when": "today", "title": "Questions over the future of the Poundland store after a kitchen retailer announces plans", "summary": "The announcement leaves it unclear what happens to the current shop.", "source": "Eastern Daily Press", "url": "https://c.newsnow.co.uk/A/1329087693?-58931%3A49098", "paywall": true},
-        {"when": "today", "title": "Man held after 27-hour siege over an alleged bomb hoax", "summary": "The paper reports that he handed a letter to a council chief.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1329075559?-58931%3A49098", "paywall": true},
-        {"when": "today", "title": "Robert Chenery leads the field at Great Yarmouth North Beach parkrun", "summary": "Result of the weekly free timed run.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1329079549?-58931%3A49098", "paywall": true},
-        {"when": "4 Nov", "title": "Great Yarmouth Pride Halloween event hailed a resounding success", "summary": "Organisers say the event exceeded expectations.", "source": "Dereham Times", "url": "https://c.newsnow.co.uk/A/1328868828?-58931%3A49098", "paywall": true},
-        {"when": "4 Nov", "title": "St Elizabeth Hospice announces its first Silent Jingle Bell Jog in Great Yarmouth", "summary": "A charity run for the Christmas season.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1328862971?-58931%3A49098", "paywall": true},
-        {"when": "3 Nov", "title": "Remembrance events begin with the blessing of crosses at the cenotaph", "summary": "The opening event of the town's remembrance programme.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1328796939?-58931%3A49098", "paywall": true},
-        {"when": "3 Nov", "title": "New heritage trail launches after a £285,000 project", "summary": "The trail showcases the town's local history.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1328764470?-58931%3A49098", "paywall": true},
-        {"when": "3 Nov", "title": "Greenpeace ship docks at the Norfolk port after a protest against sea trawling", "summary": "The vessel arrived in Great Yarmouth following the protest action.", "source": "Great Yarmouth Mercury", "url": "https://c.newsnow.co.uk/A/1328748222?-58931%3A49098", "paywall": true}
+        {
+          "when": "today",
+          "title": "Warning over scam emails offering fake council tax refunds",
+          "summary": "The local paper urges residents to be on guard against the misleading messages.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1329102789?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Questions over the future of the Poundland store after a kitchen retailer announces plans",
+          "summary": "The announcement leaves it unclear what happens to the current shop.",
+          "source": "Eastern Daily Press",
+          "url": "https://c.newsnow.co.uk/A/1329087693?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Man held after 27-hour siege over an alleged bomb hoax",
+          "summary": "The paper reports that he handed a letter to a council chief.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1329075559?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Robert Chenery leads the field at Great Yarmouth North Beach parkrun",
+          "summary": "Result of the weekly free timed run.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1329079549?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "Great Yarmouth Pride Halloween event hailed a resounding success",
+          "summary": "Organisers say the event exceeded expectations.",
+          "source": "Dereham Times",
+          "url": "https://c.newsnow.co.uk/A/1328868828?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "St Elizabeth Hospice announces its first Silent Jingle Bell Jog in Great Yarmouth",
+          "summary": "A charity run for the Christmas season.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1328862971?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "Remembrance events begin with the blessing of crosses at the cenotaph",
+          "summary": "The opening event of the town's remembrance programme.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1328796939?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "New heritage trail launches after a £285,000 project",
+          "summary": "The trail showcases the town's local history.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1328764470?-58931%3A49098",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "Greenpeace ship docks at the Norfolk port after a protest against sea trawling",
+          "summary": "The vessel arrived in Great Yarmouth following the protest action.",
+          "source": "Great Yarmouth Mercury",
+          "url": "https://c.newsnow.co.uk/A/1328748222?-58931%3A49098",
+          "paywall": true
+        }
       ]
     },
     {
-      "id": "kings-lynn", "name": "King's Lynn", "county": "NFK",
+      "id": "kings-lynn",
+      "name": "King's Lynn",
+      "county": "NFK",
       "blurb": "The centre of West Norfolk. Items are official announcements from the Borough Council of King's Lynn & West Norfolk.",
       "sources": [
-        {"label": "Borough Council newsroom", "url": "https://www.west-norfolk.gov.uk/info/20194/newsroom_news"}
+        {
+          "label": "Borough Council newsroom",
+          "url": "https://www.west-norfolk.gov.uk/info/20194/newsroom_news"
+        }
       ],
       "items": [
-        {"when": "tonight", "title": "Fawkes in the Walks: fireworks and live entertainment in King's Lynn", "summary": "The event takes place tonight, Friday 6 November, with thousands of visitors expected.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2111/kings_lynn_set_to_light_up_as_fawkes_in_the_walks_returns_this_november", "paywall": false, "official": true},
-        {"when": "3 Nov", "title": "Remembrance events across West Norfolk", "summary": "The King's Lynn wreath-laying ceremony takes place on Sunday 8 November.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2117/remembrance_events_to_take_place_across_west_norfolk", "paywall": false, "official": true},
-        {"when": "2 Nov", "title": "West Norfolk welcomes four new honorary aldermen", "summary": "Four former councillors were appointed at a special council meeting on 29 October.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2116/west_norfolk_welcomes_four_new_aldermen", "paywall": false, "official": true},
-        {"when": "29 Oct", "title": "Council Leader responds to the Government's update on local government reorganisation", "summary": "Alistair Beales reacted to the Government's announcement that day.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2115/council_leader_statement_on_governments_lgr_review_update", "paywall": false, "official": true},
-        {"when": "28 Oct", "title": "£600,000 for a new fire service training facility at King's Lynn South", "summary": "Planning work is under way after the funding package was confirmed.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2114/investment_agreed_to_build_state-of-the-art_fire_service_training_facility_at_kings_lynn_south", "paywall": false, "official": true},
-        {"when": "22 Oct", "title": "Docking neighbourhood plan referendum set for 26 November", "summary": "Voters in Docking will go to the polls on the Neighbourhood Plan.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2113/notice_of_neighbourhood_plan_referendum_docking_parish", "paywall": false, "official": true},
-        {"when": "22 Oct", "title": "Wildflower meadow takes root at Fairstead Recreation Ground", "summary": "The transformation continues with help from volunteers.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2112/wildflower_meadow_project_takes_root_at_fairstead_recreation_ground", "paywall": false, "official": true},
-        {"when": "20 Oct", "title": "Survey on healthcare services at the planned new Queen Elizabeth Hospital", "summary": "Residents are asked for their views on the future range of services.", "source": "West Norfolk Council", "url": "https://www.west-norfolk.gov.uk/news/article/2110/make_your_voice_heard_over_future_of_qeh_healthcare_services", "paywall": false, "official": true}
+        {
+          "when": "tonight",
+          "title": "Fawkes in the Walks: fireworks and live entertainment in King's Lynn",
+          "summary": "The event takes place tonight, Friday 6 November, with thousands of visitors expected.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2111/kings_lynn_set_to_light_up_as_fawkes_in_the_walks_returns_this_november",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "King's Lynn prepares for Remembrance Sunday ceremonies across West Norfolk",
+          "summary": "A civic procession, wreath-laying and two-minute silence are planned in King's Lynn on Sunday 8 November, with commemorations also taking place in nearby communities.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2117/remembrance_events_to_take_place_across_west_norfolk",
+          "paywall": false,
+          "official": true,
+          "body": "King’s Lynn will hold its main Remembrance Sunday ceremony at the War Memorial in Tower Gardens on 8 November 2026, with the public invited to join veterans, serving personnel and local organisations.\n\nThe borough’s mayor, Councillor Steve Bearshaw, is due to lead the event at 11am. A civic procession will travel from Saturday Market Place to Tower Gardens before wreaths are laid. The Last Post will precede the traditional two-minute silence, followed by the act of remembrance.\n\nAfter the outdoor ceremony, the procession is scheduled to return to King’s Lynn Minster for a further service.\n\nOther communities across West Norfolk have arranged their own commemorations. In Gaywood, a service at St Faith’s Church begins at 10am before a procession to the clock war memorial for the 11am silence. Hunstanton will mark the occasion at its war memorial.\n\nDownham Market has an afternoon parade on Sunday, with participants asked to arrive at 2pm ahead of a 2.30pm start. Upwell will also hold a commemoration at its memorial followed by a service at St Peter’s Methodist Church.\n\nThe council is encouraging residents, schools and businesses to observe the two-minute silence again on Armistice Day, Wednesday 11 November, at 11am. A separate Pause and Remember gathering is planned in Downham Market Town Square that day.\n\nThe programme was published by the Borough Council of King’s Lynn and West Norfolk on 3 November. Anyone intending to attend should check the council’s latest notices in case arrangements change."
+        },
+        {
+          "when": "2 Nov",
+          "title": "West Norfolk welcomes four new honorary aldermen",
+          "summary": "Four former councillors were appointed at a special council meeting on 29 October.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2116/west_norfolk_welcomes_four_new_aldermen",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "29 Oct",
+          "title": "Council Leader responds to the Government's update on local government reorganisation",
+          "summary": "Alistair Beales reacted to the Government's announcement that day.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2115/council_leader_statement_on_governments_lgr_review_update",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "28 Oct",
+          "title": "£600,000 for a new fire service training facility at King's Lynn South",
+          "summary": "Planning work is under way after the funding package was confirmed.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2114/investment_agreed_to_build_state-of-the-art_fire_service_training_facility_at_kings_lynn_south",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "22 Oct",
+          "title": "Docking neighbourhood plan referendum set for 26 November",
+          "summary": "Voters in Docking will go to the polls on the Neighbourhood Plan.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2113/notice_of_neighbourhood_plan_referendum_docking_parish",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "22 Oct",
+          "title": "Wildflower meadow takes root at Fairstead Recreation Ground",
+          "summary": "The transformation continues with help from volunteers.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2112/wildflower_meadow_project_takes_root_at_fairstead_recreation_ground",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "20 Oct",
+          "title": "Survey on healthcare services at the planned new Queen Elizabeth Hospital",
+          "summary": "Residents are asked for their views on the future range of services.",
+          "source": "West Norfolk Council",
+          "url": "https://www.west-norfolk.gov.uk/news/article/2110/make_your_voice_heard_over_future_of_qeh_healthcare_services",
+          "paywall": false,
+          "official": true
+        }
       ]
     },
     {
-      "id": "lowestoft", "name": "Lowestoft", "county": "SFK",
+      "id": "lowestoft",
+      "name": "Lowestoft",
+      "county": "SFK",
       "blurb": "Suffolk's east-coast town and Britain's most easterly. Items come from today's (6 Nov) collection.",
       "sources": [
-        {"label": "NewsNow: Lowestoft", "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Lowestoft"},
-        {"label": "EADT: Lowestoft News", "url": "https://www.eadt.co.uk/local-news/lowestoft-news/"},
-        {"label": "Suffolk Police: Lowestoft", "url": "https://www.suffolk.police.uk/area/your-area/suffolk/lowestoft/harbour/news/our-priorities"}
+        {
+          "label": "NewsNow: Lowestoft",
+          "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Lowestoft"
+        },
+        {
+          "label": "EADT: Lowestoft News",
+          "url": "https://www.eadt.co.uk/local-news/lowestoft-news/"
+        },
+        {
+          "label": "Suffolk Police: Lowestoft",
+          "url": "https://www.suffolk.police.uk/area/your-area/suffolk/lowestoft/harbour/news/our-priorities"
+        }
       ],
       "items": [
-        {"when": "today", "title": "KTM Duke motorbike stolen in a late-night raid", "summary": "The paper reports a night-time theft by thieves.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329109163?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "30 cyclists join the Lowestoft Glow Ride for safer night cycling", "summary": "The ride called attention to safety for cyclists after dark.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329108145?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "Man charged following thefts at Boots store", "summary": "A police charge over thefts at the shop.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329095314?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "Delays warning as a road is set to close for overnight works", "summary": "The closure is overnight, so delays are expected.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329084963?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "War memorial sites cleaned after vandals struck", "summary": "The sites were restored ahead of Sunday's Remembrance events.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329074032?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "Former discount store to be demolished for port development", "summary": "The site is being cleared for the port development project.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329069613?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "Road siege ends with a man's arrest after a petrol fire threat", "summary": "A siege-style situation on a road ended with the man taken into custody.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329068600?-59001%3A49050", "paywall": true},
-        {"when": "today", "title": "Broads Authority criticised after raising tolls for a sixth year running", "summary": "The authority has again increased tolls on the Broads.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329067978?-59001%3A49050", "paywall": true},
-        {"when": "5 Nov", "title": "Fireworks displays set to light up the town's skies", "summary": "Family events, including in nearby communities.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1329008839?-59001%3A49050", "paywall": true},
-        {"when": "5 Nov", "title": "Talks continue on resuming powerboat racing after the fatal crash inquest", "summary": "The inquest into the fatal crash has concluded.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1328976890?-59001%3A49050", "paywall": true},
-        {"when": "2 Nov", "title": "At-risk A&Es handed a reprieve, but maternity units still face the axe", "summary": "The local paper reports on the fate of hospital units at risk.", "source": "Lowestoft Journal", "url": "https://c.newsnow.co.uk/A/1328690140?-59001%3A49050", "paywall": true}
+        {
+          "when": "today",
+          "title": "KTM Duke motorbike stolen in a late-night raid",
+          "summary": "The paper reports a night-time theft by thieves.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329109163?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "30 cyclists join the Lowestoft Glow Ride for safer night cycling",
+          "summary": "The ride called attention to safety for cyclists after dark.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329108145?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Man charged following thefts at Boots store",
+          "summary": "A police charge over thefts at the shop.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329095314?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Delays warning as a road is set to close for overnight works",
+          "summary": "The closure is overnight, so delays are expected.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329084963?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "War memorial sites cleaned after vandals struck",
+          "summary": "The sites were restored ahead of Sunday's Remembrance events.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329074032?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Former discount store to be demolished for port development",
+          "summary": "The site is being cleared for the port development project.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329069613?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Road siege ends with a man's arrest after a petrol fire threat",
+          "summary": "A siege-style situation on a road ended with the man taken into custody.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329068600?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "today",
+          "title": "Broads Authority criticised after raising tolls for a sixth year running",
+          "summary": "The authority has again increased tolls on the Broads.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329067978?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Fireworks displays set to light up the town's skies",
+          "summary": "Family events, including in nearby communities.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1329008839?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Talks continue on resuming powerboat racing after the fatal crash inquest",
+          "summary": "The inquest into the fatal crash has concluded.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1328976890?-59001%3A49050",
+          "paywall": true
+        },
+        {
+          "when": "2 Nov",
+          "title": "At-risk A&Es handed a reprieve, but maternity units still face the axe",
+          "summary": "The local paper reports on the fate of hospital units at risk.",
+          "source": "Lowestoft Journal",
+          "url": "https://c.newsnow.co.uk/A/1328690140?-59001%3A49050",
+          "paywall": true
+        }
       ]
     },
     {
-      "id": "ipswich", "name": "Ipswich", "county": "SFK",
+      "id": "ipswich",
+      "name": "Ipswich",
+      "county": "SFK",
       "blurb": "Suffolk's county town. The latest items come from Thursday's (5 Nov) collection; council notices are official releases.",
       "sources": [
-        {"label": "NewsNow: Ipswich", "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Ipswich"},
-        {"label": "Ipswich Borough Council", "url": "https://www.ipswich.gov.uk/ipswich-newsroom"}
+        {
+          "label": "NewsNow: Ipswich",
+          "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Ipswich"
+        },
+        {
+          "label": "Ipswich Borough Council",
+          "url": "https://www.ipswich.gov.uk/ipswich-newsroom"
+        }
       ],
       "items": [
-        {"when": "5 Nov", "title": "Drug gang stayed in Ipswich before an £80m cocaine plot", "summary": "The story covers the Ipswich link in a large cocaine conspiracy.", "source": "East Anglian Daily Times", "url": "https://c.newsnow.co.uk/A/1328968065?-57431%3A46381", "paywall": true},
-        {"when": "5 Nov", "title": "Ten historic Suffolk buildings added to the 'at risk' register", "summary": "The listed buildings need urgent help.", "source": "Ipswich Star", "url": "https://c.newsnow.co.uk/A/1328961227?-57431%3A46381", "paywall": true},
-        {"when": "5 Nov", "title": "Concerns for stretched GP services amid plans for nearly 14,000 homes", "summary": "Fears that the planned housing will overload local healthcare.", "source": "Ipswich Star", "url": "https://c.newsnow.co.uk/A/1328955876?-57431%3A46381", "paywall": true},
-        {"when": "5 Nov", "title": "New M&S outside Ipswich moves closer as construction date revealed", "summary": "A start date for building work has been confirmed.", "source": "East Anglian Daily Times", "url": "https://c.newsnow.co.uk/A/1328955748?-57431%3A46381", "paywall": true},
-        {"when": "4 Nov", "title": "A12 to close overnight for roadworks", "summary": "A stretch of the A12 was closed for the night.", "source": "Ipswich Star", "url": "https://c.newsnow.co.uk/A/1328917009?-57431%3A46381", "paywall": true},
-        {"when": "4 Nov", "title": "Lead Reform councillor dropped after sharing an AI image", "summary": "The paper also carries readers' reactions.", "source": "Ipswich Star", "url": "https://c.newsnow.co.uk/A/1328889320?-57431%3A46381", "paywall": true},
-        {"when": "4 Nov", "title": "Riviera D'Amour opens its doors on the Ipswich Waterfront", "summary": "A new venue has opened on the waterfront.", "source": "Ipswich.co.uk", "url": "https://c.newsnow.co.uk/A/1328885721?-57431%3A46381", "paywall": false},
-        {"when": "4 Nov", "title": "Ipswich woman prosecuted for breeding and selling puppies without a licence", "summary": "The council successfully prosecuted her for unlicensed dog breeding.", "source": "Ipswich Borough Council", "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/woman-prosecuted-breeding-and-selling-puppies-without-licence", "paywall": false, "official": true},
-        {"when": "4 Nov", "title": "Decisions from the Ipswich Borough Council Executive meeting of 3 November", "summary": "The council's summary of what the meeting decided.", "source": "Ipswich Borough Council", "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/decisions-ipswich-borough-councils-executive-0", "paywall": false, "official": true},
-        {"when": "30 Oct", "title": "Council strengthens action to prevent homelessness and tackle rough sleeping", "summary": "An updated action plan, a new temporary accommodation policy and a long-term partnership plan.", "source": "Ipswich Borough Council", "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/ipswich-borough-council-strengthens-action-prevent-homelessness-and-tackle", "paywall": false, "official": true}
+        {
+          "when": "5 Nov",
+          "title": "Drug gang stayed in Ipswich before an £80m cocaine plot",
+          "summary": "The story covers the Ipswich link in a large cocaine conspiracy.",
+          "source": "East Anglian Daily Times",
+          "url": "https://c.newsnow.co.uk/A/1328968065?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Ten historic Suffolk buildings added to the 'at risk' register",
+          "summary": "The listed buildings need urgent help.",
+          "source": "Ipswich Star",
+          "url": "https://c.newsnow.co.uk/A/1328961227?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "Concerns for stretched GP services amid plans for nearly 14,000 homes",
+          "summary": "Fears that the planned housing will overload local healthcare.",
+          "source": "Ipswich Star",
+          "url": "https://c.newsnow.co.uk/A/1328955876?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "5 Nov",
+          "title": "New M&S outside Ipswich moves closer as construction date revealed",
+          "summary": "A start date for building work has been confirmed.",
+          "source": "East Anglian Daily Times",
+          "url": "https://c.newsnow.co.uk/A/1328955748?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "A12 to close overnight for roadworks",
+          "summary": "A stretch of the A12 was closed for the night.",
+          "source": "Ipswich Star",
+          "url": "https://c.newsnow.co.uk/A/1328917009?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "Lead Reform councillor dropped after sharing an AI image",
+          "summary": "The paper also carries readers' reactions.",
+          "source": "Ipswich Star",
+          "url": "https://c.newsnow.co.uk/A/1328889320?-57431%3A46381",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "Riviera D'Amour opens its doors on the Ipswich Waterfront",
+          "summary": "A new venue has opened on the waterfront.",
+          "source": "Ipswich.co.uk",
+          "url": "https://c.newsnow.co.uk/A/1328885721?-57431%3A46381",
+          "paywall": false
+        },
+        {
+          "when": "4 Nov",
+          "title": "Ipswich dog breeder fined after operating without a licence",
+          "summary": "A woman who bred and advertised nine litters of puppies without a licence has been fined following a prosecution by Ipswich Borough Council.",
+          "source": "Ipswich Borough Council",
+          "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/woman-prosecuted-breeding-and-selling-puppies-without-licence",
+          "paywall": false,
+          "official": true,
+          "body": "An Ipswich resident has been sentenced after admitting that she ran a dog-breeding business without the licence required by the local authority.\n\nAnita Holea, from St Helens Street, pleaded guilty at Ipswich Magistrates’ Court on 19 October 2026. According to Ipswich Borough Council, investigators established that nine litters of puppies had been bred and advertised for sale between 10 October 2023 and 1 September 2025.\n\nThe council said the activity continued despite repeated warnings. The court imposed a £666 fine, a £266 victim surcharge and prosecution costs of £4,399.43. Together, those amounts total £5,331.43.\n\nThe case highlights the legal obligations that apply to commercial dog breeding. The council says licensing is intended to safeguard animal welfare and provide reassurance to people buying puppies. It has urged anyone planning to breed and sell dogs for profit to check the requirements and seek advice before starting.\n\nThe prosecution was announced by the council on 4 November. The details above are drawn from its published account of the court case."
+        },
+        {
+          "when": "4 Nov",
+          "title": "Decisions from the Ipswich Borough Council Executive meeting of 3 November",
+          "summary": "The council's summary of what the meeting decided.",
+          "source": "Ipswich Borough Council",
+          "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/decisions-ipswich-borough-councils-executive-0",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "30 Oct",
+          "title": "Council strengthens action to prevent homelessness and tackle rough sleeping",
+          "summary": "An updated action plan, a new temporary accommodation policy and a long-term partnership plan.",
+          "source": "Ipswich Borough Council",
+          "url": "https://www.ipswich.gov.uk/ipswich-newsroom/2026/ipswich-borough-council-strengthens-action-prevent-homelessness-and-tackle",
+          "paywall": false,
+          "official": true
+        }
       ]
     },
     {
-      "id": "bury", "name": "Bury St Edmunds", "county": "SFK",
+      "id": "bury",
+      "name": "Bury St Edmunds",
+      "county": "SFK",
       "blurb": "West Suffolk's historic market town. Items come from Thursday's (5 Nov) collection.",
       "sources": [
-        {"label": "NewsNow: Bury St Edmunds", "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Bury+St+Edmunds"},
-        {"label": "West Suffolk Council", "url": "https://www.westsuffolk.gov.uk/"}
+        {
+          "label": "NewsNow: Bury St Edmunds",
+          "url": "https://www.newsnow.co.uk/h/UK/England/Suffolk/Bury+St+Edmunds"
+        },
+        {
+          "label": "West Suffolk Council",
+          "url": "https://www.westsuffolk.gov.uk/"
+        }
       ],
       "items": [
-        {"when": "4 Nov", "title": "Bury cinema shortlisted to be named best in the country", "summary": "Locals spoke warmly about the venue.", "source": "Suffolk News", "url": "https://c.newsnow.co.uk/A/1328873085?-59002%3A49103", "paywall": true},
-        {"when": "4 Nov", "title": "Free ice rink and fairground rides return for Christmas in the historic town", "summary": "The Christmas programme again includes an ice rink and rides.", "source": "Bury St Edmunds Mercury", "url": "https://c.newsnow.co.uk/A/1328870095?-59002%3A49103", "paywall": true},
-        {"when": "3 Nov", "title": "Blazin' Fiddles to bring high-energy Scottish music to Bury St Edmunds", "summary": "A lively concert in the town.", "source": "East Anglian Daily Times", "url": "https://c.newsnow.co.uk/A/1328794374?-59002%3A49103", "paywall": true},
-        {"when": "3 Nov", "title": "Stop, look up and you'll see the town's Demon Frieze", "summary": "A local-history piece on a distinctive decoration in the town centre.", "source": "Suffolk News", "url": "https://c.newsnow.co.uk/A/1328744024?-59002%3A49103", "paywall": true},
-        {"when": "31 Oct", "title": "Rick Parfitt tribute to be held in Suffolk ten years after his death", "summary": "A tribute to the late Status Quo guitarist.", "source": "East Anglian Daily Times", "url": "https://c.newsnow.co.uk/A/1328555280?-59002%3A49103", "paywall": true},
-        {"when": "30 Oct", "title": "Witchcraft memorial described as 'an image of defiance rather than suppression'", "summary": "West Suffolk Council's announcement about the memorial.", "source": "West Suffolk Council", "url": "https://c.newsnow.co.uk/A/1328490575?-59002%3A49103", "paywall": false, "official": true},
-        {"when": "30 Oct", "title": "Greene King commits to preserving the town centre brewhouse as a heritage and visitor destination", "summary": "The company has pledged to protect the brewhouse in future.", "source": "Suffolk News", "url": "https://c.newsnow.co.uk/A/1328483625?-59002%3A49103", "paywall": true},
-        {"when": "28 Oct", "title": "West Suffolk backs late-night shopping with free parking", "summary": "The council is offering free parking to encourage evening shopping.", "source": "West Suffolk Council", "url": "https://c.newsnow.co.uk/A/1328280147?-59002%3A49103", "paywall": false, "official": true}
+        {
+          "when": "4 Nov",
+          "title": "Bury cinema shortlisted to be named best in the country",
+          "summary": "Locals spoke warmly about the venue.",
+          "source": "Suffolk News",
+          "url": "https://c.newsnow.co.uk/A/1328873085?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "4 Nov",
+          "title": "Free ice rink and fairground rides return for Christmas in the historic town",
+          "summary": "The Christmas programme again includes an ice rink and rides.",
+          "source": "Bury St Edmunds Mercury",
+          "url": "https://c.newsnow.co.uk/A/1328870095?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "Blazin' Fiddles to bring high-energy Scottish music to Bury St Edmunds",
+          "summary": "A lively concert in the town.",
+          "source": "East Anglian Daily Times",
+          "url": "https://c.newsnow.co.uk/A/1328794374?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "3 Nov",
+          "title": "Stop, look up and you'll see the town's Demon Frieze",
+          "summary": "A local-history piece on a distinctive decoration in the town centre.",
+          "source": "Suffolk News",
+          "url": "https://c.newsnow.co.uk/A/1328744024?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "31 Oct",
+          "title": "Rick Parfitt tribute to be held in Suffolk ten years after his death",
+          "summary": "A tribute to the late Status Quo guitarist.",
+          "source": "East Anglian Daily Times",
+          "url": "https://c.newsnow.co.uk/A/1328555280?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "30 Oct",
+          "title": "Witchcraft memorial described as 'an image of defiance rather than suppression'",
+          "summary": "West Suffolk Council's announcement about the memorial.",
+          "source": "West Suffolk Council",
+          "url": "https://c.newsnow.co.uk/A/1328490575?-59002%3A49103",
+          "paywall": false,
+          "official": true
+        },
+        {
+          "when": "30 Oct",
+          "title": "Greene King commits to preserving the town centre brewhouse as a heritage and visitor destination",
+          "summary": "The company has pledged to protect the brewhouse in future.",
+          "source": "Suffolk News",
+          "url": "https://c.newsnow.co.uk/A/1328483625?-59002%3A49103",
+          "paywall": true
+        },
+        {
+          "when": "28 Oct",
+          "title": "West Suffolk backs late-night shopping with free parking",
+          "summary": "The council is offering free parking to encourage evening shopping.",
+          "source": "West Suffolk Council",
+          "url": "https://c.newsnow.co.uk/A/1328280147?-59002%3A49103",
+          "paywall": false,
+          "official": true
+        }
       ]
     }
   ]
